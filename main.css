@@ -27,6 +27,9 @@ body {
     margin: 0;
     padding: 0 ;
     text-align: center;
+    z-index: 5;
+    background-color:whitesmoke;
+    height: 100vh;
 }
 
 .bar-logo {
@@ -48,8 +51,9 @@ body {
 .bar-ubicacion:hover {
     background-color: #FFC107;
     
-   
 }
+
+
 
 a.tooltips {
   position: relative;
@@ -87,38 +91,59 @@ a:hover.tooltips span {
   z-index: 999;
 }
 
-.main-picture {
+figure.main-picture {
     position: absolute;
     display: inline-flex;
-    box-sizing: border-box;
+    
     width: 100%;
     margin: 0 0;
-    padding: 0;
-    top: 0;
+    padding: 0 0;
+   
+    
    
 }
+
+.main-promo {
+    display: block;
+    position: fixed;
+    padding-right: 7em;
+    padding-left: 0;
+    top: 2em;
+}
+
 .promo {
     position: relative;
     display: block;
-    width: 20%;
-    margin-left: 50em;
+    width: 35%;
+    margin-left: 45em;
     top: 5em;
+    background-color: brown;
+    opacity: 0.9;
+    filter: alpha(opacity=80);
+    z-index: -1;
 }
 
 .promo h1 {
     font-size: 1.5em;
     font-weight: bold;
+    color: white;
+    padding:0 1em;
+    
 }
 
 .promo p {
-    font-size: 1em;
+    font-size: 16px;
+    color: white;
+    z-index: 5;
+    padding: 1em 1em;
+    
 }
 
 a {
     list-style: none;
 }
 .topbar {
-    position: absolute;
+    position: fixed;
     padding: 2em 3em;
     font-family: 'Domine', serif;
     
@@ -129,13 +154,70 @@ a {
     padding: 1em 0.5em;
 }
 .social {
+    display: block;
     position: absolute;
     padding: 0 2em;
     margin-top: 0;
     margin-left: 50em;
+  
+    
+    
     
         
 }
+//* slider*//
+.slider {
+    
+    width: 95%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 500%;
+    height: 100vh;
+    animation: cambio 25s infinite alternate;
+    animation-timing-function: ease-out;
+    
+}
+
+.slider:nth-child(2) ul {
+    animation-timing-function: step-start;
+}
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+.slider img {
+    width: 100vw;
+    
+    padding-top: 0;
+}
+
+@keyframes cambio {
+    0% { margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    25% {margin-left: -100%}
+    40% {margin-left: -100%}
+    
+    45% {margin-left: -200%}
+    60% {margin-left: -200%}
+    
+    65% {margin-left: -300%}
+    80% {margin-left: -300%}
+    
+    85% {margin-left: -400%}
+    100% {margin-left: -400%}
+    
+    
+}
+
+
+
 
 .button {
      position: absolute;
